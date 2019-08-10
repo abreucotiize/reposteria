@@ -1,0 +1,15 @@
+<div class="container justify-content-center align-items-center">
+    <div><img [src]="postre.url" alt="" class="w-50">
+        <h2>{{postre.nombre}}</h2>
+        <h4>RD${{postre.precio}}</h4>
+
+    <li *ngFor="let ing of postre.ingredientes">
+        {{ing}}
+    </li><hr>
+    <p class="text-justify">
+      {{postre.receta}}  
+    </p>
+
+<br>
+</div>
+</div>

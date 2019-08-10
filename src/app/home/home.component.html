@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row" *ngIf="postres.length!=0; else vacio">
+        <div *ngFor="let postre of postres" class="card col-md-3" style="margin: 3px;">
+    <img [src]="postre.url" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{postre.nombre}}</h5>
+      <p class="card-text">{{postre.precio}}</p>
+      <a href="#" class="btn btn-primary" routerLink="/details"[queryParams]="postre">Ver mas</a>
+    </div>
+  </div>
+    </div>
+</div>
+<input type="text" [(ngModel)]="cantidad" class="form-control">
+<button class="btn btn-success" (click)="solicitar()">solicitar</button>
+<ng-template #vacio>
+    <h2>No existen postres para mostrar</h2>
+    <div class="row">
+            <div *ngFor="let postre of users.results" class="card col-md-3" style="margin: 3px;">
+        <img [src]="postre.picture.thumbnail" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{postre.name.title}} {{postre.name.first}} {{postre.name.last}}</h5>
+          <p class="card-text">{{postre.email}}</p>
+          <a href="#" class="btn btn-primary" routerLink="/details"[queryParams]="postre">Ver mas</a>
+        </div>
+      </div>
+        </div>
+    
+</ng-template>

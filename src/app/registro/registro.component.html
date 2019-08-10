@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="container-fluid">
+            <label >Nombre</label><br>
+        <input type="text" class="form-control" [(ngModel)]="pos" >
+        <button type="submit" class="btn btn-primary" [routerLink]="['/juegos/', pos]">Ir</button>
+        <form #formContacto="ngForm"  >
+            <div class="col-md-4">
+            <label for="nombre"  >Nombre</label><br>
+            <input type="text" #nombre="ngModel" [(ngModel)]="usuario.nombre" class="form-control" name="nombre" required>
+                <span style="color:red" *ngIf="nombre.touched && !nombre.valid">
+                    Este campo es obligatorio
+                </span><br><br>
+            </div>
+            <div class="col-md-4">
+            <label for="apellido"  >Apellidos</label><br>
+            <input type="text" #apellido="ngModel" [(ngModel)]="usuario.apellido" class="form-control" name="apellido" id="" required>
+            <span style="color:red" *ngIf="apellido.touched && !apellido.valid">
+                    Este campo es obligatorio
+                </span><br><br>
+            </div>
+            <div class="col-md-4">
+            <label for="cedula"  >Cedula</label><br>
+            <input type="text" #cedula="ngModel" [(ngModel)]="usuario.cedula" class="form-control" name="cedula" id="" required>
+            <span style="color:red" *ngIf="cedula.touched && !cedula.valid">
+                    Este campo es obligatorio
+                </span><br><br>
+            </div>
+            <div class="col-md-4">
+            <label for="tel"  >Telefono</label><br>
+            <input type="text" #tel="ngModel" [(ngModel)]="usuario.telefono" class="form-control" name="tel" id="" required>
+            <span style="color:red" *ngIf="tel.touched && !tel.valid">
+                    Este campo es obligatorio
+                </span><br><br>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" routerLink="/detalleusuario" [disabled]="!formContacto.form.valid" [queryParams]="usuario">Guardar</button>
+            
+            </form>
+            
+    </div> 
+</div>
