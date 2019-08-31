@@ -1,3 +1,4 @@
+import { ChatComponent } from './chat/chat.component';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:"details", component:DetallesComponent},
   {path:"juegos/:id", component:JuegosComponent},
   {path:"registro", component:RegistroComponent},
-  {path:"detalleusuario", component:DetalleUsuarioComponent}
+  {path:"detalleusuario", component:DetalleUsuarioComponent},
+  {path:"chat", component:ChatComponent}
 ];
 
 @NgModule({

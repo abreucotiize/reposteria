@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="chat" >
+        <div class="sms-content" >
+            
+            <div class="sms" *ngFor="let sms of messages">
+            {{sms.sms}}
+            </div>
+        </div>
+        <div class="sms-box">
+            <input class="form-" type="text" [(ngModel)]="mensaje">
+            <button class="btn btn-outline-primary" type="button" (click)="send()">Enviar</button>
+        </div>
+
+        
+
+    </div>
+</div>

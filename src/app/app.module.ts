@@ -10,6 +10,10 @@ import { JuegosComponent } from './juegos/juegos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
+import { ChatComponent } from './chat/chat.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
 @NgModule({
@@ -19,13 +23,16 @@ import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.compo
     HomeComponent,
     JuegosComponent,
     RegistroComponent,
-    DetalleUsuarioComponent
+    DetalleUsuarioComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

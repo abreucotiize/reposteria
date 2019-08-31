@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .chat{
+        border: 1px solid;
+        width: 50%;
+        height: 100%;
+
+        .sms-content{
+            width: 100%;
+            height: 93%;
+            border: 1px solid;
+            .sms{
+                width: 50%;
+                height: 30px;
+                font-size: 18px;
+                border: solid 1px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .sms-box{
+            input{
+                width: 77%;
+            }
+
+            button{
+                width:15%;
+            }
+        }
+    }
+
+    
+
+}
